@@ -9,8 +9,12 @@ h1 {
 a {
   color: #f00;
 }
-h2 {
-  font-size: 30px;
+h2 ~ p {
+  font-size: 0.8em;
+  font-style: italic;
+  margin: 1em auto 0;
+  max-width: 70%;
+  text-align: center;
 }
 
 /* HEADER STYLES */
@@ -22,12 +26,30 @@ h2 {
   display: inline-block;
   margin-left: 1em;
 }
+.header-nav > li ~ li {
+  border-left: 1px solid rgba(0,0,0,0.3);
+  padding-left: 1em;
+}
 .header-nav a {
   color: #000;
   font-size: 0.8rem;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
+}
+.header-nav > li:first-child a{
+  color: #ed6e2f;
+}
+.header-nav > li:first-child a:hover{
+  color: #000;
+}
+.header-nav a:hover,
+.header-nav a:active {
+  color: #ed6e2f;
+}
+.header-logo:hover,
+.header-logo:active {
+  opacity: 0.5;
 }
 /* HERO STYLES */
 .full-hero {
