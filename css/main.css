@@ -29,6 +29,24 @@ h2 ~ p {
   width: 100%;
   z-index: 20;
 }
+.header-logo {
+  background-color: #000;
+  box-sizing: border-box;
+  display: block;
+  height: 10vh;
+  left: -30px;
+  padding-top: 10px;
+  position: relative;
+  text-align: center;
+  width: 10vh;
+}
+.header-logo:hover,
+.header-logo:active {
+  background-color: #ed6e2f;
+}
+.header-logo img {
+  width: 4.3vh;
+}
 .header-nav {
   float: right;
   padding: 5.5vh 60px 0 0;
@@ -38,7 +56,7 @@ h2 ~ p {
   margin-left: 1em;
 }
 .header-nav > li ~ li {
-  border-left: 1px solid rgba(255,255,255,0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
   padding-left: 1em;
 }
 .header-nav a {
@@ -50,51 +68,27 @@ h2 ~ p {
   text-decoration: none;
   text-transform: uppercase;
 }
-.header-nav > li:first-child a{
-  color: #ed6e2f;
-}
-.header-nav > li:first-child a:hover{
-  color: #fff;
-}
-.header-nav > li:last-child a{
-  color: #ed6e2f;
-}
-.header-nav > li:last-child a:hover{
-  color: #fff;
-}
 .nav-links a:hover,
-.nav-links a:active {
+.nav-links a:active  {
   color: #ed6e2f;
 }
-.header-logo {
-  background-color: #000;
-  display: block;
-  left: -30px;
-  height: 10vh;
-  padding: 10px;
-  box-sizing: border-box;
-  position: relative;
-  text-align: center;
-  width: 10vh;
+.header-nav > li:first-child a {
+  color: #ed6e2f;
 }
-.header-logo img {
-  height: 80%;
-  width: auto;
+.header-nav > li:first-child a:hover {
+  color: #fff;
 }
-.header-logo:hover,
-.header-logo:active {
-  background-color: #ed6e2f;
-}
+
 /* FOOTER STYLES */
 .footer {
   background-color: #000;
   padding: 10vh 0 15vh;
   text-align: center;
 }
-.footer img{
+.footer-logo img {
   width: 50px;
 }
-.footer h3{
+.footer h3 {
   color: #fff;
   padding-top: 1.5em;
   text-transform: uppercase;
@@ -109,12 +103,26 @@ h2 ~ p {
 .footer-nav a {
   color: #ccc;
 }
+
 /* HERO STYLES */
 .full-hero {
   background-color: #c7dbfc;
-  height: 50vh;
+  background-size: cover;
+  box-sizing: border-box;
+  height: 100vh;
+  padding-top: 10vh;
 }
+.hero-home {
+  background-image: url(/images/shark.jpg);
+  background-position: center top;
+}
+
 /* SOCIAL STYLES */
+.social-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
 .social-link {
   background: rgba(150, 150, 150, 0.5);
   border-radius: 99px;
@@ -132,13 +140,6 @@ h2 ~ p {
   vertical-align: middle;
   width: 2.5em;
 }
-.social-list {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-  position: relative;
-  z-index: 40;
-}
 .social-list > li {
   display: inline-block;
   margin: 0 0.5em;
@@ -153,12 +154,11 @@ h2 ~ p {
 }
 .bio-box {
   border: 1px solid black;
-  border-color: black black red;
   box-sizing: border-box;
   float: left;
   font-size: 1rem;
   margin: 40px 1% 0;
-  padding: 0 2% 2%;
+  padding: 2%;
   width: 23%;
 }
 .bio-box h3 {
@@ -176,7 +176,6 @@ h2 ~ p {
 }
 .bio-copy {
   font-size: 1em;
-  line-height: 1.5;
 }
 .bio-copy a {
   color: green;
