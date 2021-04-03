@@ -44,8 +44,13 @@ layout: default
         <a href="https://learnenough.com/">learnenough.com</a>.
       </p>
     </div>
+  </div>
 
-
+  <div class="home-section">
+    <h4>Most recent post</h4>
+    {% for post in site.posts limit:1 %}
+      {% include post-excerpt.html %}
+    {% endfor %}
   </div>
 
   <div class="home-section">
